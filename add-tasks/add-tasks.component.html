@@ -1,0 +1,35 @@
+<div>
+  <h3 >{{isUpdate?"Edit":"New"}} Tasks</h3>
+      <form #f="ngForm" (ngSubmit)="save()">
+        
+        <label for="fname">Name</label>
+        <input type="text" id="fnm" name="fnm" placeholder="Your name.."
+        [(ngModel)]="tasks.name" #fnm=ngModel>
+    
+        <label for="fdate">Date</label>
+        <input type="date" id="fnm" name="fdt" placeholder="Todays Date"
+        [(ngModel)]="tasks.date" #fnm=ngModel>
+          <br>
+        <label for="fedate">Tasks Date</label>
+        <input type="date" id="fedt" name="fedt" placeholder="Date when Task Need To Be Done"
+        [(ngModel)]="tasks.execDate" #fnm=ngModel>
+        <br>
+        <label for="fetime">Task Time</label>
+        <input type="time" id="ftime" name="ftime" placeholder="Time When Task Need To Be Done"
+        [(ngModel)]="tasks.exectime" #fnm=ngModel>
+        <br>
+        <label for="ftask">Whats The Task</label>
+        <input type="text" id="ftask" name="ftask" placeholder="Your Task"
+        [(ngModel)]="tasks.task" #fnm=ngModel>
+    
+        <label for="category">category</label>
+        <select id="category" name="category" placeholder="select" [(ngModel)]="tasks.category" #fnm=ngModel>
+          <option value="Important">Important</option>
+          <option value="Normal">Normal</option>
+        </select>
+      
+        <input type="submit" value="Submit">
+      </form>
+
+  
+</div>
